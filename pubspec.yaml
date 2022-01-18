@@ -38,6 +38,8 @@ dependencies:
   carousel_slider: ^4.0.0
   smooth_page_indicator: ^1.0.0+2
   table_calendar: ^3.0.3
+  bloc: ^8.0.2
+  url_launcher: ^6.0.18
 
 dev_dependencies:
   flutter_test:
@@ -65,6 +67,8 @@ flutter:
   assets:
      - assets/
      - assets/emojis/
+     - assets/svg/
+     - assets/moviecovers/
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
 

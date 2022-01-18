@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:onlinetickets/account.dart';
-import 'package:onlinetickets/body.dart';
-import 'package:onlinetickets/favorites.dart';
-import 'package:onlinetickets/splashscreen.dart';
-import 'package:onlinetickets/tickets.dart';
+import 'package:onlinetickets/account/account.dart';
+import 'package:onlinetickets/body/body.dart';
+import 'package:onlinetickets/explore/explore.dart';
+import 'package:onlinetickets/welcome/splashscreen.dart';
+import 'package:onlinetickets/tickets/tickets.dart';
 
 void main() {
   runApp(const MaterialApp(
@@ -22,11 +22,11 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   int _selectedIndex = 0;
-  static const List<Widget> _widgetOptions = <Widget>[
-    Body(),
-    FavoritePage(),
+  static final List<Widget> _widgetOptions = <Widget>[
+    const Body(),
+    const FavoritePage(),
     TicketsPage(),
-    AccountPage()
+    const AccountPage()
   ];
   void _onItemTapped(int index) {
     setState(() {
@@ -53,7 +53,6 @@ class _HomePageState extends State<HomePage> {
           elevation: 0,
           currentIndex: _selectedIndex,
           onTap: _onItemTapped,
-          
           items: [
             BottomNavigationBarItem(
                 label: '',
@@ -61,23 +60,34 @@ class _HomePageState extends State<HomePage> {
                   width: 30,
                   height: 30,
                   child: SvgPicture.asset(
-                    "assets/home.svg",
-                    color: _selectedIndex == 0? Colors.white : Colors.grey[500],
+                    "assets/svg/home.svg",
+                    color:
+                        _selectedIndex == 0 ? Colors.white : Colors.grey[500],
                   ),
                 )),
-             BottomNavigationBarItem(
+            BottomNavigationBarItem(
               label: '',
-              icon: Icon(Icons.favorite, size: 25,color: _selectedIndex == 1? Colors.white : Colors.grey[500],),
+              icon: Icon(
+                Icons.explore,
+                size: 25,
+                color: _selectedIndex == 1 ? Colors.white : Colors.grey[500],
+              ),
             ),
-             BottomNavigationBarItem(
+            BottomNavigationBarItem(
                 label: '',
                 icon: ImageIcon(
-                  const AssetImage('assets/plane-tickets.png',),
-                  color: _selectedIndex == 2? Colors.white : Colors.grey[500],
+                  const AssetImage(
+                    'assets/plane-tickets.png',
+                  ),
+                  color: _selectedIndex == 2 ? Colors.white : Colors.grey[500],
                 )),
-             BottomNavigationBarItem(
+            BottomNavigationBarItem(
               label: '',
-              icon: Icon(Icons.account_circle_rounded, size: 25,color: _selectedIndex == 3? Colors.white : Colors.grey[500],),
+              icon: Icon(
+                Icons.account_circle_rounded,
+                size: 25,
+                color: _selectedIndex == 3 ? Colors.white : Colors.grey[500],
+              ),
             ),
           ],
         ),

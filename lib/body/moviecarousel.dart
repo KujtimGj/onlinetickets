@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:onlinetickets/moviecard.dart';
-import 'package:onlinetickets/movies.dart';
+import 'package:onlinetickets/body/moviecard.dart';
+import 'package:onlinetickets/body/movies.dart';
 import 'dart:math' as math;
 
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
@@ -36,9 +36,9 @@ class _MovieCarouselState extends State<MovieCarousel> {
     return Column(
       children: <Widget>[
         Padding(
-          padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 5),
+          padding: const EdgeInsets.symmetric(vertical: 30, horizontal: 5),
           child: AspectRatio(
-            aspectRatio: 0.85,
+            aspectRatio: 1.0,
             child: PageView.builder(
                 controller: _pageController,
                 onPageChanged: (value) {

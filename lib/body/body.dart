@@ -1,21 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:onlinetickets/moviecarousel.dart';
-import 'package:onlinetickets/sortbar.dart';
+import 'package:onlinetickets/body/moviecarousel.dart';
+import 'package:onlinetickets/body/sortbar.dart';
 
 class Body extends StatelessWidget {
-  const Body({Key? key}) : super(key: key);
+  const Body({
+    Key? key,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color(0xff101012),
-       appBar: AppBar(
+      appBar: AppBar(
         automaticallyImplyLeading: false,
         elevation: 0,
-        toolbarHeight: 90,
+        toolbarHeight: 80,
         systemOverlayStyle:
-            const SystemUiOverlayStyle(statusBarColor: Color(0xff101012)),
+        const SystemUiOverlayStyle(statusBarColor: Color(0xff101012)),
         backgroundColor: const Color(0xff101012),
         leading: null,
         title: Column(
@@ -45,6 +47,10 @@ class Body extends StatelessWidget {
           children: <Widget>[
             const Sortbar(),
             const SizedBox(height: 20),
+            // const Cattext(),
+            // const SizedBox(height: 10),
+            // const Categories(),
+            const SizedBox(height: 10),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 15.0),
               child: Text('Showing this month',

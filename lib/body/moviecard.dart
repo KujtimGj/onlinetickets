@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:onlinetickets/details.dart';
-import 'package:onlinetickets/movies.dart';
+import 'package:onlinetickets/body/movies.dart';
 
 class MovieCard extends StatelessWidget {
   final Movie movie;
@@ -9,8 +9,9 @@ class MovieCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal:8.0,vertical: 10.0),
+      padding: const EdgeInsets.symmetric(horizontal:5.0),
       child: InkWell(
         onTap:() => Navigator.push(context,MaterialPageRoute(builder:(context) => Details(movie: movie))),
         child: Column(
@@ -19,8 +20,9 @@ class MovieCard extends StatelessWidget {
           children: <Widget>[
             Expanded(
               child: Container(
-                margin: const EdgeInsets.symmetric(horizontal: 15, vertical: 20),
-                padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 25),
+                height: size.height * 0.35,
+                margin: const EdgeInsets.symmetric(horizontal: 15,),
+                padding: const EdgeInsets.symmetric(horizontal: 20),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
                   image: DecorationImage(
@@ -31,11 +33,7 @@ class MovieCard extends StatelessWidget {
               ),
             ),
             // const SizedBox(height: 3),
-            Text(movie.title,
-                style: Theme.of(context)
-                    .textTheme
-                    .headline6!
-                    .copyWith(color: Colors.white70))
+          
           ],
         ),
       ),

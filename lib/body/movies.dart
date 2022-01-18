@@ -16,6 +16,7 @@ Movie ({
 });
 
 
+
 }
 
 List<Movie> movies = [
@@ -23,7 +24,7 @@ List<Movie> movies = [
   Movie(
     id:2,
     title: 'American Sniper',
-    cover: 'assets/american-sniper.jpg',
+    cover: 'assets/moviecovers/american-sniper.jpg',
     duration: '2h 12min',
     rating: 9.5,
     genre: 'Action',
@@ -33,7 +34,7 @@ List<Movie> movies = [
   Movie(
     id:1,
     title: 'Spider-Man:No way home',
-    cover: 'assets/spiderman.jpg',
+    cover: 'assets/moviecovers/spiderman.jpg',
     duration: '2h 28min',
     rating: 9.8,
     genre: 'Action',
@@ -43,7 +44,7 @@ List<Movie> movies = [
     Movie(
     id:3,
     title: 'Interstellar',
-    cover: 'assets/interstellar.jpg',
+    cover: 'assets/moviecovers/interstellar.jpg',
     duration: '2h 49min',
     rating: 10.0,
     genre: 'Sci-Fi',
@@ -53,7 +54,7 @@ List<Movie> movies = [
   Movie(
     id:4,
     title: 'Django',
-    cover: 'assets/django.jpg',
+    cover: 'assets/moviecovers/django.jpg',
     duration: '2h 45min',
     rating: 7.9,
     genre: 'Action',
