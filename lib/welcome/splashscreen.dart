@@ -1,8 +1,9 @@
 import 'dart:async';
-
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:onlinetickets/main.dart';
+import 'package:onlinetickets/SignUp/signup.dart';
+// import 'package:onlinetickets/main.dart';
+// import 'package:onlinetickets/LogIn/welcome.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
@@ -15,8 +16,8 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    Timer(const Duration(seconds: 3),(){
-      Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (_) => const HomePage()) );
+    Timer(const Duration(seconds: 2),(){
+      Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (_) => const SignUp()) );
     });
   }
 
